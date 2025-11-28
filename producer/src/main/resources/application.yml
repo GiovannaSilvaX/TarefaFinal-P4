@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: usuarios-producer
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    replicas: 2
+    partitions: 5
+    admin:
+      auto-create: true
+    topic: usuario.criado
+    producer:
+      max-block-ms: 5000
+      bootstrap-servers: ${spring.kafka.bootstrap-servers}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
