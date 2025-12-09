@@ -7,7 +7,7 @@ spring:
         usuarioCriadoConsumer-in-0:
           destination: usuario.criado
           content-type: application/json
-          group: usuarioCriadoGroup
+          group: ${KAFKA_CONSUMER_GROUP}
       kafka:
         binder:
           brokers: ${KAFKA_URL}

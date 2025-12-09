@@ -27,7 +27,7 @@ docker-compose up -d --build
 - **Producer API**: O serviço `producer` expõe uma API na porta `8080`.
   - URL: `http://localhost:8080`
   Requisição
-  POST /producer
+  POST /producer/send
   ```json
   {
     "nome": "Teste",

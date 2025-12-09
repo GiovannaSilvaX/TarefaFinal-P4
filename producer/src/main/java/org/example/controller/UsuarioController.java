@@ -21,6 +21,6 @@ public class UsuarioController {
 
     @PostMapping("/send")
     public void send(@RequestBody UsuarioCriado usuarioCriado) {
-
+        kafkaTemplate.send(topic, usuarioCriado);
     }
 }
